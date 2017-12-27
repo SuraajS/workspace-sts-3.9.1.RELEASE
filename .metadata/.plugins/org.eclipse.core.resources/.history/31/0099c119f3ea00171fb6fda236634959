@@ -1,0 +1,35 @@
+<div class="row">
+	<div class = "col-xs-12" >
+		<form>
+			<div class="row">
+				<div class = "col-xs-12" >
+				 <div class="pull-left">
+                        <b> <input type ="text" 
+                        id="title" 
+                        class = "form-control" 
+                        placeholder = "Please enter Title here" 
+                        style = "width: 700px; height: 40px">  </b>
+                    </div>
+                    <div class = "pull-right">
+						<button class = "btn btn-success">Save</button>
+						<button class = "btn btn-primary">Clear</button>
+						<button class = "btn btn-danger">Delete</button>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class = "col-xs-4" >
+					<div class= "form-group">
+						<label for="type">Type</label>
+						<select class="form-group" id="typeSelect" style= "width:100%">
+							<option value= "Read" >Read</option>
+							<option value= "Watch">Watch</option>
+							<option value= "Hear">Hear</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

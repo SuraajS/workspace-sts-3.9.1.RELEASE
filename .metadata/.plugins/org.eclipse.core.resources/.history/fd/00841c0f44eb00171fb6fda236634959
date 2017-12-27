@@ -1,0 +1,16 @@
+<div class = "row">
+<div class = "col-xs-12">
+<a class="list-group-item clearfix"
+	style= "cursor:pointer;"
+	[routerLink] = "[index]"
+	routerLinkActive= "active">
+    <div class="col-xs-8 pull-left">
+        <h5 class="list-group-item-heading"> {{blogItem.name}}</h5>
+        <p class="list-group-item-text">{{blogItem.btype}}</p>
+    </div>
+    <span class="col-xs-4 pull-right">
+		<img alt="{{blogItem.imagePath}}" src="{{blogItem.imagePath}}" class="img-responsive" style="max-height:50px;">
+	</span>
+</a>
+</div>
+</div>

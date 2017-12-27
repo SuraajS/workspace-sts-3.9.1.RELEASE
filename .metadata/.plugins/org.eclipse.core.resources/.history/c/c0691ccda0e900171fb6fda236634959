@@ -1,0 +1,24 @@
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { BlogItem } from '../bloglist.model';
+import { BlogListService } from '../bloglist.service';
+
+@Component({
+  selector: 'app-bloglistitem',
+  templateUrl: './bloglistitem.component.html',
+  styleUrls: ['./bloglistitem.component.css']
+})
+export class BloglistitemComponent implements OnInit {
+   @Output() blogSelected = new EventEmitter<BlogItem>();
+
+  blogItems: BlogItem[]
+
+  constructor(private blogListService: BlogListService) { }
+
+  ngOnInit() {
+     this.blogItems = this.blogListService.getBlogList();
+  }
+
+  onSelectedBlog(blogItem: BlogItem) {
+    this.blogSelected.emit(blogItem);
+  }
+}

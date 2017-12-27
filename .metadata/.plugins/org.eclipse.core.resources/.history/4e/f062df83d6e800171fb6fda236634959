@@ -1,0 +1,18 @@
+import { Component, OnInit } from '@angular/core';
+
+
+@Component({
+  selector: 'app-bloglistiteminfo',
+  templateUrl: './bloglistiteminfo.component.html',
+  styleUrls: ['./bloglistiteminfo.component.css']
+})
+export class BloglistiteminfoComponent implements OnInit {
+
+  blogItemInfo: BlogItemInfo[] = [{}]
+  
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}

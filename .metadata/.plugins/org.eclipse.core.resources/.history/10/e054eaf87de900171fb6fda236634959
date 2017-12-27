@@ -1,0 +1,15 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-bloglistitemiter',
+  templateUrl: './bloglistitemiter.component.html',
+  styleUrls: ['./bloglistitemiter.component.css']
+})
+export class BloglistitemiterComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}

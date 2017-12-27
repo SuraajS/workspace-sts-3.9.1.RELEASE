@@ -1,0 +1,7 @@
+<div class = "row">
+	<div class = "col-xs-12">
+	<app-bloglistitemiter *ngFor="let indvblogItem of blogItems" 
+		[blogItem] = "indvblogItem"
+		(selectedBlog) = "onSelectedBlog(indvblogItem)"></app-bloglistitemiter>
+	</div>
+</div>

@@ -1,0 +1,16 @@
+export class BlogItem {
+  public blogNumber: String;
+  public blogType: String;
+  public blogTitle: String;
+  public blogGenre: String;
+  public blogContent: String;
+  public imagePath: String;
+  public isActive: boolean;
+
+  constructor(blogNumber: String, blogType: String, blogTitle: String, blogGenre: String, blogContent: String,
+              imagePath: String, isActive: boolean) {
+
+  }
+}
+
+

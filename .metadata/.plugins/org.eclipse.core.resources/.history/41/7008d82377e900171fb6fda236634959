@@ -1,0 +1,22 @@
+<nav class="navbar navbar-default">
+    <div class=".container-fluid" style= "background-color: #34495E">
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand" style= "color: #FFF">Dashboard</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#" (click)="onSelect('blog-list')" >My Blog List</a></li>
+                <li><a href="#" style= "color: #FFF">Profile Performance</a></li>
+                <li><a href="#" style= "color: #FFF">Create New</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" role="button" style= "color: #FFF">Logout<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" style= "color: #FFF">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

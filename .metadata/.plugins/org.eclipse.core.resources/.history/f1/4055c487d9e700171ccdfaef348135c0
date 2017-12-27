@@ -1,0 +1,38 @@
+package io.codeHomeProject.blogList;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+@Component
+public class blogInfoDBSeeder implements CommandLineRunner{
+    
+	public blogListRepository BlogListRepository;
+	
+	
+	
+	public blogInfoDBSeeder(blogListRepository blogListRepository) {
+		this.BlogListRepository = blogListRepository;
+	}
+
+
+
+	@Override
+	public void run(String... arg0) throws Exception {
+		blogInfo blog = new blogInfo( "Read", "Tomorrow Never Reads","String1", "String2", "String3", true, null, null);
+		blogInfo blog2 = new blogInfo( "Watch", "Youtube Nights with Suraj","String11", "String22", "String33", true, null, null);
+		blogInfo blog3 = new blogInfo( "Hear", "Sound it like ARR","String111", "String222", "String333", true, null, null);
+		
+		//Code to drop All hotels.
+		this.BlogListRepository.deleteAll();
+		
+		//Creating Data in database
+		List<blogInfo> blogLists = Arrays.asList(blog, blog2, blog3);
+		this.BlogListRepository.save(blogLists);
+		
+	}
+
+
+}

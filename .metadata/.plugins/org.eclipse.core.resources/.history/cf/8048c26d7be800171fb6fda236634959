@@ -1,0 +1,12 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<app-header></app-header>
+<app-bloglist></app-bloglist>
+<app-blog-info></app-blog-info>
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+
+
+

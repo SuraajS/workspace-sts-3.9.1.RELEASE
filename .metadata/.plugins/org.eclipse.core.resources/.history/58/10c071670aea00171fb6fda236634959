@@ -1,0 +1,20 @@
+import { BlogItem } from '../../bloglist.model';
+import { BlogListService } from '../../bloglist.service';
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-bloglistitemiter',
+  templateUrl: './bloglistitemiter.component.html',
+  styleUrls: ['./bloglistitemiter.component.css']
+})
+export class BloglistitemiterComponent implements OnInit {
+
+blogItem: BlogItem;
+
+  constructor(private blogListService: BlogListService) { }
+
+  ngOnInit() {
+  }
+
+
+}

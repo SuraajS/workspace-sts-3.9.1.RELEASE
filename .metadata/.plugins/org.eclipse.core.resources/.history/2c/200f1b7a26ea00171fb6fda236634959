@@ -1,0 +1,20 @@
+import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+
+@Component({
+  selector: 'app-bloglistitemdefault',
+  templateUrl: './bloglistitemdefault.component.html',
+  styleUrls: ['./bloglistitemdefault.component.css']
+})
+export class BloglistitemdefaultComponent implements OnInit {
+
+  constructor(private router: Router,
+              private route: ActivatedRoute) { }
+
+  ngOnInit() {
+  }
+
+  createNewBlog() {
+      this.router.navigate(['createNew'], {relativeTo: this.route})
+  }
+}

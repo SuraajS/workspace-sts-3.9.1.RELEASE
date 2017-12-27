@@ -1,0 +1,17 @@
+export class BlogItem {
+  public name: String;
+  public content: String;
+  public imagePath: String;
+  public genre: String;
+  public type: String;
+  public number: String;
+  public isActive: boolean;
+  
+  
+
+  constructor(name: String, content: String, imagePath: String) {
+    this.name = name;
+    this.content = content;
+    this.imagePath = imagePath;
+  }
+}

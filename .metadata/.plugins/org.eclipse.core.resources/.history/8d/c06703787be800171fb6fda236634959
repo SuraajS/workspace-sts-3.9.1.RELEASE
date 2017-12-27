@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<app-header></app-header>
+<app-bloglist></app-bloglist>
+<app-blog-info></app-blog-info>
+<div class= "container">
+<div class = "row">
+ <h1>
+    Welcome to {{ title }}!
+  </h1>
+<div class = "col-md-12">
+</div>
+</div>
+ 
+</div>
+
+
+

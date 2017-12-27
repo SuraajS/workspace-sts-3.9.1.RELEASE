@@ -1,0 +1,15 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-bloglistitemcrudop',
+  templateUrl: './bloglistitemcrudop.component.html',
+  styleUrls: ['./bloglistitemcrudop.component.css']
+})
+export class BloglistitemcrudopComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}

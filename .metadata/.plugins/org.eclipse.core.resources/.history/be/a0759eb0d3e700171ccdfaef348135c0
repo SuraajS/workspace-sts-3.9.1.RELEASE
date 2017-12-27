@@ -1,0 +1,92 @@
+package io.codeHomeProject.blogList;
+
+import java.util.Date;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.IndexDirection;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+
+@Document(collection = "BlogInfo")
+public class blogInfo {
+
+	@Id
+	private String id;
+	
+	@Indexed(direction = IndexDirection.ASCENDING)
+ 	private String blogType;
+ 	private String blogTitle;
+ 	private String blogGenre;
+ 	private String blogContent;
+ 	private boolean isActive;
+ 	private Date createdDate;
+ 	private Date updatedDate;
+
+ 	
+ 	
+	public blogInfo(String id, String blogType, String blogTitle, String blogGenre, String blogContent,
+			boolean isActive, Date createdDate, Date updatedDate) {
+		super();
+		this.id = id;
+		this.blogType = blogType;
+		this.blogTitle = blogTitle;
+		this.blogGenre = blogGenre;
+		this.blogContent = blogContent;
+		this.isActive = isActive;
+		this.createdDate = createdDate;
+		this.updatedDate = updatedDate;
+	}
+	
+ 	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getBlogType() {
+		return blogType;
+	}
+	public void setBlogType(String blogType) {
+		this.blogType = blogType;
+	}
+	public String getBlogTitle() {
+		return blogTitle;
+	}
+	public void setBlogTitle(String blogTitle) {
+		this.blogTitle = blogTitle;
+	}
+	public String getBlogGenre() {
+		return blogGenre;
+	}
+	public void setBlogGenre(String blogGenre) {
+		this.blogGenre = blogGenre;
+	}
+	public String getBlogContent() {
+		return blogContent;
+	}
+	public void setBlogContent(String blogContent) {
+		this.blogContent = blogContent;
+	}
+	public boolean isActive() {
+		return isActive;
+	}
+	public void setActive(boolean isActive) {
+		this.isActive = isActive;
+	}
+	public Date getCreatedDate() {
+		return createdDate;
+	}
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
+	}
+	public Date getUpdatedDate() {
+		return updatedDate;
+	}
+	public void setUpdatedDate(Date updatedDate) {
+		this.updatedDate = updatedDate;
+	}
+	
+
+}

@@ -1,0 +1,12 @@
+<div class = "row">
+	<div class = "col-xs-12">
+	<input type ="text" 
+           id="search" 
+           class = "form-control" 
+           placeholder = "Search" >
+	<br>
+	<app-bloglistitemiter *ngFor="let indvblogItem of blogItems; let i=index" 
+		[blogItem] = "indvblogItem"
+		[index] = "i"></app-bloglistitemiter>
+	</div>
+</div>

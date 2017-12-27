@@ -1,0 +1,17 @@
+eclipse.preferences.version=1
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.data-jpa=1
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.data-mongodb=3
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.derby=1
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.web=4
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=Demo
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.bootVersion=1.5.9.RELEASE
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.description=Server Middleware for Last Seen Today App
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.groupId=io.codeHomeProject
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.javaVersion=1.8
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.language=java
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=codeHomeProject
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packageName=io.codeHomeProject
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packaging=jar
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.type=MAVEN
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.version=1.4.2.SNAPSHOT
+org.springframework.ide.eclipse.boot.wizard.initializr.url=http\://start.spring.io\n

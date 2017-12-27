@@ -1,0 +1,16 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<app-header (fetSel)="onNavigate($event)" ></app-header>
+	<div class = "row">	
+		<div class = "col-xs-12">
+			<app-bloglist *ngIf="targetUI === 'blog-list'"></app-bloglist>
+			<app-profperf></app-profperf>
+		</div>
+	</div>
+
+
+
+
+
+
+

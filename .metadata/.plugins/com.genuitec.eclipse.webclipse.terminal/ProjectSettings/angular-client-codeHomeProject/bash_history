@@ -1,0 +1,24 @@
+ng g c bloglist 
+ng g c blogInfo --spec false
+ng gc bloglist/bloglistitem --spec false
+ng g c bloglist/bloglistitem --spec false
+ng g c bloglist/bloglistiteminfo --spec false
+npm install --save bootstrap
+ng g c profperf --spec false
+ng Serve
+ng g c bloglist/bloglistitemiter --spec false
+ng g c bloglist/bloglistitem/bloglistitemiter --spec false
+ng g c helper/dropdown.directive.ts
+ng g c bloglist/bloglistitemdeft --spec false
+ng g c bloglist/bloglistitem_default --spec false
+ng g c bloglist/bloglistitemdefault
+ng g c bloglist/bloglistdefault --spec false
+ng g c bloglist/mapping/default --spec false
+ng g c mapping/bloglistdefault --spec false
+ng g c bloglist/bloglistitemdefault --spec false
+ng g c bloglist/bloglistitemdefault --spec false --module=app-routes.module
+ng g c bloglist/bloglistitemcrudop --spec false --module=app.module
+ng serve
+ng g p helper/pipe/continued
+ng g p helper/pipe/continued --spec false --module=app.module 
+ng g p helper/pipe/filter --spec false --module=app.module 

@@ -1,0 +1,7 @@
+
+@Directive ({
+  selector: '[dropdown]'
+})
+export class DropDownDirective() {
+  
+}

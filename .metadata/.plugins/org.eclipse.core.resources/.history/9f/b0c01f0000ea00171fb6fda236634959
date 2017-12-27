@@ -1,0 +1,18 @@
+import { BloglistComponent } from './bloglist/bloglist.component';
+import { ProfperfComponent } from './profperf/profperf.component';
+import {NgModule } from '@angular/core';
+import { Routes } from '@angular/router';
+
+const aRoute: Routes = [
+  {path: '', redirectTo: '/bloglist'},
+  {path: 'bloglist', component: BloglistComponent },
+  {path: 'profile', component: ProfperfComponent },
+];
+
+@NgModule ([
+  imports: [RoutingModule].forRoot(aRoute)],
+])
+  
+export class AppRoutingModule {
+
+}

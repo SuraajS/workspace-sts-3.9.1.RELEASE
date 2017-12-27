@@ -1,0 +1,28 @@
+<div class="row">
+	<div class = "col-xs-12" >
+		<form>
+			<div class="row">
+				<div class = "col-xs-12" >
+				 <div class="pull-left">
+                        <b> <input type ="text" 
+                        id="title" 
+                        class = "form-control" 
+                        placeholder = "<i>Please enter Title here</i>" 
+                        style = "width: 700px; height: 40px">  </b>
+                    </div>
+                    <div class = "pull-right">
+						<button class = "btn btn-success">Save</button>
+						<button class = "btn btn-primary">Clear</button>
+						<button class = "btn btn-danger">Delete</button>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class = "col-xs-12" >
+					
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

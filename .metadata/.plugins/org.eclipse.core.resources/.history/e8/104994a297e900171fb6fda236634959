@@ -1,0 +1,13 @@
+import { Directive } from '@angular/core';
+
+@Directive ({
+  selector: '[appDropdown]'
+})
+  
+export class DropDownDirective {
+    toggleOn = true;
+  @HostListener(click) openToggle() {
+    this
+  }
+
+}

@@ -1,0 +1,8 @@
+<div class = "row">
+	<div class = "col-xs-12">
+	<input type= "text">
+	<app-bloglistitemiter *ngFor="let indvblogItem of blogItems; let i=index" 
+		[blogItem] = "indvblogItem"
+		[index] = "i"></app-bloglistitemiter>
+	</div>
+</div>

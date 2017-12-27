@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;angular-client-codeHomeProject/src/app/helper/bloglist.model.ts&apos; to &apos;blogiteminfo.model.ts&apos;" description="Rename resource &apos;bloglist.model.ts&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/app/helper/bloglist.model.ts" name="blogiteminfo.model.ts" stamp="1514138636401" updateReferences="true"/>
+</session>

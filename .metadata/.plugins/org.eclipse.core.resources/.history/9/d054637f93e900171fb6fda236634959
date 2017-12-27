@@ -1,0 +1,32 @@
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { BlogItem } from '../bloglist.model';
+
+@Component({
+  selector: 'app-bloglistitem',
+  templateUrl: './bloglistitem.component.html',
+  styleUrls: ['./bloglistitem.component.css']
+})
+export class BloglistitemComponent implements OnInit {
+   @Output() blogSelected = new EventEmitter<BlogItem>();
+
+  blogItems: BlogItem[] = [
+   new BlogItem('iPhone 8 Review', 'Read', 'https://icdn3.digitaltrends.com/image/iphone-8-update-in-hand-logo-800x533-c.jpg',
+    'Technology', 'Read', '1', true),
+
+   new BlogItem('Should I Invest in BitCoin- Podcast', 'Hear', 'https://bitcoin.org/img/icons/opengraph.png',
+    'Finance', 'Hear', '2', true),
+
+   new BlogItem('Bahubali 2 - The Conclusion Review', 'Watch', 'https://images-na.ssl-images-amazon.com/images/I/711eHgGtnFL._SX385_.jpg',
+    'Movies', 'Watch', '3', true)
+
+  ];
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  onSelectedBlog(blogItem: BlogItem) {
+    this.blogSelected.emit(blogItem);
+  }
+}

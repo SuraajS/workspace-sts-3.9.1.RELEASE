@@ -1,0 +1,43 @@
+import { BlogListService } from '../bloglist.service';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { ActivatedRoute, Params } from '@angular/router';
+
+@Component({
+  selector: 'app-bloglistitemcrudop',
+  templateUrl: './bloglistitemcrudop.component.html',
+  styleUrls: ['./bloglistitemcrudop.component.css']
+})
+export class BloglistitemcrudopComponent implements OnInit {
+  id: number;
+  editBlog = false;
+  blogForm = FormGroup;
+
+  constructor(private route: ActivatedRoute,
+              private blogListService: BlogListService) { }
+
+  ngOnInit() {
+    this.route.params.subscribe(
+    (params: Params) => {
+      this.id = +params['id'];
+      if (params['id'] != null) {
+        this.editBlog = true;
+      }
+      console.log(this.editBlog);
+    });
+  }
+
+ private initialize() {
+    
+
+   if(this.editBlog) {
+     const reqBlogItem = this.blogListService.getBlogById(this.id);
+      name = reqBlogItem.name;
+     
+   }
+
+  this.blogForm = new FormGroup({
+  });
+ }
+
+}

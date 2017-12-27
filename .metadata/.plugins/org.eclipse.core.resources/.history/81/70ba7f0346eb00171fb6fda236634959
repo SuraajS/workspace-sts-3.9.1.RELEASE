@@ -1,0 +1,21 @@
+import { Component, EventEmitter, Output } from '@angular/core';
+
+@Component({
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
+})
+
+export class HeaderComponent {
+ @Output() fetSel = new EventEmitter<String>();
+
+  onSelect(feature: String) {
+    this.fetSel.emit(feature);
+  }
+
+  onCreateNewSelect() {
+
+  }
+  constructor() {
+   }
+}

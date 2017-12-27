@@ -1,0 +1,18 @@
+import { BlogItem } from './bloglist.model';
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-bloglist',
+  templateUrl: './bloglist.component.html',
+  styleUrls: ['./bloglist.component.css'],
+  providers: [blogListService]
+})
+export class BloglistComponent implements OnInit {
+
+  blogSelect: BlogItem;
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}

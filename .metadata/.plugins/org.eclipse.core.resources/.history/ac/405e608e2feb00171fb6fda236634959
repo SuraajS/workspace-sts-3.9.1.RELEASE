@@ -1,0 +1,75 @@
+import { BlogListService } from '../bloglist.service';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ActivatedRoute, Params } from '@angular/router';
+
+@Component({
+  selector: 'app-bloglistitemcrudop',
+  templateUrl: './bloglistitemcrudop.component.html',
+  styleUrls: ['./bloglistitemcrudop.component.css']
+})
+export class BloglistitemcrudopComponent implements OnInit {
+  id: number;
+  editBlog = false;
+  blogForm: FormGroup;
+
+  constructor(private route: ActivatedRoute,
+              private blogListService: BlogListService) { }
+
+  ngOnInit() {
+    this.route.params.subscribe(
+    (params: Params) => {
+      this.id = +params['id'];
+      this.editBlog = params['id'] != null;
+      this.initialize();
+
+      console.log('editBlog value is :' + this.editBlog);
+    });
+  }
+
+  private initialize() {
+    let blogName: String = '';
+    let content: String = '';
+    let btype: String = '';
+    let bgenre: String = '';
+    let imagePath: String = '';
+    let isActive = false;
+
+   if (this.editBlog) {
+     const reqBlogItem = this.blogListService.getBlogById(this.id);
+     blogName = reqBlogItem.name;
+     content = reqBlogItem.content;
+     btype = reqBlogItem.btype;
+     bgenre = reqBlogItem.bgenre;
+     imagePath = reqBlogItem.imagePath;
+     isActive = reqBlogItem.isActive;
+
+      this.blogForm = new FormGroup({
+     'name': new FormControl(blogName, Validators.required),
+    'content': new FormControl(content, Validators.required),
+    'btype': new FormControl(btype, Validators.required),
+    'bgenre': new FormControl(bgenre, Validators.required),
+    'imagePath': new FormControl(imagePath, Validators.required),
+    'isActive': new FormControl(isActive, Validators.required)
+      });
+   }else {
+     this.blogForm = new FormGroup({
+     'name': new FormControl('', Validators.required),
+    'content': new FormControl('', Validators.required),
+    'btype': new FormControl('', Validators.required),
+    'bgenre': new FormControl('', Validators.required),
+    'imagePath': new FormControl('', Validators.required),
+    'isActive': new FormControl(false, Validators.required)
+       });
+    }
+ }
+
+  onSubmit() {
+    if(this.editBlog){
+      this.blogListService.updateBlog(this.id, this.blogForm.value);
+    }else {
+      this.blogListService.addBlog()
+    }
+  }
+
+}

@@ -1,0 +1,5 @@
+package io.codeHomeProject.blogList;
+
+public interface blogListRepository {
+
+}

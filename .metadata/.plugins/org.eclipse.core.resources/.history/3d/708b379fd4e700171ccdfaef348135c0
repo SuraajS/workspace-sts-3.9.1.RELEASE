@@ -1,0 +1,15 @@
+package io.codeHomeProject.blogList;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+@Component
+public class blogInfoDBSeeder implements CommandLineRunner{
+
+	@Override
+	public void run(String... arg0) throws Exception {
+		blogInfo blog = new blogInfo( "Read", "Tomorrow Never Reads","String1", "String2", "String3", true, null, null);
+		
+	}
+
+}

@@ -1,0 +1,58 @@
+package io.codeHomeProject.blogList;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/bloglist")
+public class blogListController {
+	
+	public blogListRepository BlogListRepository;
+	
+	
+ 	public blogListController(blogListRepository blogListRepository) {
+		this.BlogListRepository = blogListRepository;
+	}
+
+ 	@GetMapping("/blogs")
+	public List<blogInfo> AllBlogsByUserId() {
+		List<blogInfo> blogs = this.BlogListRepository.findAll();
+		return blogs;
+ 	}
+	
+	@PutMapping
+	public void insert(@RequestBody blogInfo blog) {
+		this.BlogListRepository.insert(blog);
+	}
+	
+	@PostMapping
+	public void update(@RequestBody blogInfo blog) {
+		this.BlogListRepository.save(blog);
+	}
+
+	@DeleteMapping("/{id}")
+	public void delete(@PathVariable("id") String id) {
+		this.BlogListRepository.delete(id);
+	}
+	
+	@GetMapping("blogs/{id}")
+	public blogInfo getById(@PathVariable("id") String id) {
+		blogInfo blog = this.BlogListRepository.findById(id);
+		return blog;
+	}
+	
+	@GetMapping("blogs/{blogType}")
+	public blogInfo getByNameLike(@PathVariable("blogType") String blogType) {
+		List<blogInfo> requestBlog = this.BlogListRepository.findByNameLike(blogType);
+		return (blogInfo) requestBlog;
+	}
+}

@@ -1,0 +1,8 @@
+export class BlogItem {
+  public name: String;
+  public content: String;
+  public imagePath: String;
+
+  constructor(name: String, content: String, imagePath: String) {
+  }
+}

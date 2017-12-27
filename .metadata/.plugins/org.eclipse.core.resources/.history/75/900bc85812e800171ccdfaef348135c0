@@ -1,0 +1,14 @@
+package io.codeHomeProject.blogList;
+
+
+import java.util.List;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface blogListRepository extends MongoRepository< blogInfo, String> {
+
+		blogInfo findById(String id);
+		List<blogInfo> findByNameLike(String blogType);
+}

@@ -1,0 +1,27 @@
+import { BloglistComponent } from './bloglist/bloglist.component';
+import { BloglistitemiterComponent } from './bloglist/bloglistitem/bloglistitemiter/bloglistitemiter.component';
+import { BloglistitemdefaultComponent } from './bloglist/bloglistitemdefault/bloglistitemdefault.component';
+import { BloglistiteminfoComponent } from './bloglist/bloglistiteminfo/bloglistiteminfo.component';
+import { ProfperfComponent } from './profperf/profperf.component';
+
+import {NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
+const aRoute: Routes = [
+  {path: '', redirectTo: '/bloglist', pathMatch: 'full'},
+  {path: 'bloglist', component: BloglistComponent, children: [
+    {path: '', component: BloglistitemdefaultComponent },
+    {path: 'createNew', component: BloglistiteminfoComponent },
+    {path: ':id', component: BloglistiteminfoComponent },
+    {path: ':id/edit', component: BloglistiteminfoComponent },
+  ] },
+  {path: 'profile', component: ProfperfComponent },
+];
+
+@NgModule ({
+  imports: [RouterModule.forRoot(aRoute)],
+  exports: [RouterModule]
+})
+
+export class AppRoutingModule {
+}

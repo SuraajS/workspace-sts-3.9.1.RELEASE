@@ -1,0 +1,97 @@
+<div class="row">
+	<div class = "col-xs-12" >
+		<form *ngIf= "reqBlogItem" [formGroup]="blogForm" (ngSubmit)="onSubmit()">
+			<div class="row">
+				<div class = "col-xs-12" >
+				 <div class="pull-left">
+                        <b> <input type ="text" 
+                        id="name" 
+                        class = "form-control" 
+                        placeholder = "Please enter Title here" 
+                        style = "width: 700px; height: 40px"
+                        formControlName="name">  </b>
+                    </div>
+                    <div class = "pull-right">
+						<button class = "btn btn-success">Save</button>
+						<button class = "btn btn-primary">Clear</button>
+						<button class = "btn btn-danger">Delete</button>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="row">
+				<div class = "col-xs-4" >
+					<div class= "form-group">
+						<label for="type">Type</label>
+						<br>
+						<select class="form-control" id="typeSelect" style= "width:75%"
+						formControlName="btype">
+							<option value= "Read" >Read</option>
+							<option value= "Watch">Watch</option>
+							<option value= "Hear">Hear</option>
+						</select>
+					</div>
+				</div>
+				<div class = "col-xs-4" >
+					<div class= "form-group">
+						<label for="type">Genre</label>
+						<br>
+						<select class="form-control" id="genreSelect" style= "width:75%"
+						formControlName="bgenre">
+							<option value= "Auto">Auto</option>
+							<option value= "Tech">Technology</option>
+							<option value= "Finance">Finance</option>
+							<option value= "Health">Health/Fitness</option>
+							<option value= "Entertainment">Movies/Entertainment</option>
+						</select>
+					</div>
+				</div>
+				<div class = "col-xs-4" >
+					<div class= "form-group">
+						<label for="type">Active</label>
+						<br>
+						<select class="form-control" id="activeSelect" style= "width:75%"
+						formControlName="isActive">
+							<option value= "Yes" >Yes</option>
+							<option value= "No">No</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class = "col-xs-12" >
+					<div class= "form-group">
+						<label for="imgSrc">Image Source </label>
+						<br>
+						<input type= "text" class="form-control" id="imgSrc" style= "width:50%"
+						formControlName="imagePath">
+					</div>               
+				</div>
+			</div>
+			<div class="row">
+				<div class = "col-xs-12" >
+						<label for="content">Content</label>
+						<br>
+									<div class="row">
+						<div class = "col-xs-10" >
+							<textarea rows="3" class="form-control" id="imgSrc" style="resize:none"
+							formControlName="content"></textarea>
+						</div>
+						<div class = "col-xs-1" >
+							<button class = "btn btn-success pull-right"> + </button>
+						</div>
+						<div class = "col-xs-1" >
+							<button class = "btn btn-danger pull-left"> x </button>
+						</div>
+           </div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+			<!-- <div class="row">
+				<div class = "col-xs-12" >
+					<img alt="blog image" src="" class= "img-responsive" >           
+				</div>
+			</div>  -->

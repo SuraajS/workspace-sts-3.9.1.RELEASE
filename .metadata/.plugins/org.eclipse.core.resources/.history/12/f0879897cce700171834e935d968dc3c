@@ -1,0 +1,83 @@
+package oi.codeHomeProject.blogList;
+
+import java.sql.Date;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
+public class blogList {
+	
+	private String Id;
+	private String blogType;
+	private String blogTitle;
+	private String blogGenre;
+	private String blogContent;
+	private boolean isActive;
+	private Date createdDate;
+	private Date updatedDate; 
+	
+	public blogList(String id, String blogType, String blogTitle, String blogGenre, String blogContent, boolean isActive,
+			Date createdDate, Date updatedDate) {
+		super();
+		Id = id;
+		this.blogType = blogType;
+		this.blogTitle = blogTitle;
+		this.blogGenre = blogGenre;
+		this.blogContent = blogContent;
+		this.isActive = isActive;
+		this.createdDate = createdDate;
+		this.updatedDate = updatedDate;
+	}
+	
+	
+	public String getId() {
+		return Id;
+	}
+	public void setId(String id) {
+		Id = id;
+	}
+	public String getBlogType() {
+		return blogType;
+	}
+	public void setBlogType(String blogType) {
+		this.blogType = blogType;
+	}
+	public String getBlogTitle() {
+		return blogTitle;
+	}
+	public void setBlogTitle(String blogTitle) {
+		this.blogTitle = blogTitle;
+	}
+	public String getBlogGenre() {
+		return blogGenre;
+	}
+	public void setBlogGenre(String blogGenre) {
+		this.blogGenre = blogGenre;
+	}
+	public String getBlogContent() {
+		return blogContent;
+	}
+	public void setBlogContent(String blogContent) {
+		this.blogContent = blogContent;
+	}
+	public boolean getIsActive() {
+		return isActive;
+	}
+	public void setIsActive(boolean isActive) {
+		this.isActive = isActive;
+	}
+	public Date getCreatedDate() {
+		return createdDate;
+	}
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
+	}
+	public Date getUpdatedDate() {
+		return updatedDate;
+	}
+	public void setUpdatedDate(Date updatedDate) {
+		this.updatedDate = updatedDate;
+	}
+	
+
+}

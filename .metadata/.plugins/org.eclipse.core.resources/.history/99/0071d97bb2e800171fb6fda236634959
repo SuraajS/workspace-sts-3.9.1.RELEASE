@@ -1,0 +1,5 @@
+export class blogListItem {
+  public name: String;
+  public content: String;
+  public imagePath: String;
+}

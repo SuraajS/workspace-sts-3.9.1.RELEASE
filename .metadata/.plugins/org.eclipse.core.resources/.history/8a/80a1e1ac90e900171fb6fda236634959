@@ -1,0 +1,13 @@
+<div class = "row">
+	<div class = "col-md-3">
+		<app-bloglistitem (blogSelected) = "blogSelect= $event"></app-bloglistitem>
+	</div>
+	<div class = "col-md-9">
+		<app-bloglistiteminfo
+			*ngIf="blogSelect; else infoText"
+			[blogItem] ></app-bloglistiteminfo>
+		<ng-template #infoText>
+		 <p>Choose any Existing Blog or Create a New One</p>
+		</ng-template>
+	</div>
+</div>
