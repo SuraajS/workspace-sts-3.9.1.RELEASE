@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="pull-left">
-                        <b> {{ blogItemInfos.name }} </b>
+                        <b> {{ blogItemInfos.blogTitle }} </b>
                     </div>
                     <div class="pull-right">
                         <button class="btn btn-primary" (click)="onEdit()">Edit</button>
@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col-xs-4">
                     <label for="btype">Type </label>
-                    <input type="text" class="form-control" id="btype" style="max-width:200px" value="{{ blogItemInfos.btype }}" readOnly>
+                    <input type="text" class="form-control" id="btype" style="max-width:200px" value="{{ blogItemInfos.blogType }}" readOnly>
                 </div>
                 <div class="col-xs-4">
                     <label for="bGenre">Genre </label>

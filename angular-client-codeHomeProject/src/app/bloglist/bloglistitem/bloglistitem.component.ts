@@ -22,7 +22,8 @@ export class BloglistitemComponent implements OnInit {
         this.blogItems = updatedBlogList;
       }
     );
-    this.blogItems = this.blogListService.getBlogList();
+
+      // this.blogItems = this.blogListService.getBlogList();
   }
 
 

@@ -1,10 +1,6 @@
 package io.codeHomeProject.blogList;
 
-import java.util.Date;
-
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.IndexDirection;
-import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 
@@ -18,25 +14,24 @@ public class blogInfo {
  	private String blogTitle;
  	private String blogGenre;
  	private String blogContent;
+ 	private String imagePath;
  	private boolean isActive;
- 	private Date createdDate;
- 	private Date updatedDate;
+
 
  	public blogInfo() {
 		
 	}
  	
  	
-	public blogInfo(String blogNumber, String blogType, String blogTitle, String blogGenre, String blogContent,
-			boolean isActive, Date createdDate, Date updatedDate) {
+	public blogInfo(String blogNumber, String blogType, String blogTitle, String blogGenre, String blogContent, String imagePath, boolean isActive) {
 		this.blogNumber = blogNumber;
 		this.blogType = blogType;
 		this.blogTitle = blogTitle;
 		this.blogGenre = blogGenre;
 		this.blogContent = blogContent;
+		this.imagePath = imagePath;
 		this.isActive = isActive;
-		this.createdDate = createdDate;
-		this.updatedDate = updatedDate;
+
 	}
 	
  	
@@ -65,17 +60,14 @@ public class blogInfo {
 		return blogContent;
 	}
 
+	public String getImagePath() {
+		return imagePath;
+	}
+
 	public boolean isActive() {
 		return isActive;
 	}
 
-	public Date getCreatedDate() {
-		return createdDate;
-	}
 
-	public Date getUpdatedDate() {
-		return updatedDate;
-	}
-	
 
 }

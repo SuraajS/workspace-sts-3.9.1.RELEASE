@@ -1,9 +1,6 @@
 package io.codeHomeProject.blogList;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.boot.CommandLineRunner;
@@ -19,15 +16,13 @@ public class blogInfoDBSeeder implements CommandLineRunner{
 		this.BlogListRepository = blogListRepository;
 	}
 
-	public String createdDate = "12-12-2017";
-	public String updatedDate = "21-12-2017";
 
 	@Override
 	public void run(String... arg0) throws Exception {
 		
-		blogInfo blog = new blogInfo("1", "Read", "To Watch", "To Watch Conetnt", "To WAtch Genre", false, null, null);
-		blogInfo blog2 = new blogInfo("2", "Watch", "To Watch", "To Watch Conetnt", "To WAtch Genre", false, null, null);
-		blogInfo blog3 = new blogInfo("3", "Hear", "To Hear", "To Hear Conetnt", "To Hear Genre", false, null, null);
+		blogInfo blog = new blogInfo("1", "Watch", "MS Dhoni- Movie review", "Movies/Entertainment", "MS Dhoni is very good and rates 4.5 on 5 in my book", "https://i.ndtvimg.com/i/2017-08/ms-dhoni-afp_806x605_51503600539.jpg", true);
+		blogInfo blog2 = new blogInfo("2", "Read", "How to Influence People", "Books", "Dale Carnagie masterpiece still proves legit in 2017", "https://images-na.ssl-images-amazon.com/images/I/51SwGh%2BfzXL._SX306_BO1,204,203,200_.jpg", true);
+		blogInfo blog3 = new blogInfo("2", "Hear", "Eminem - Revival", "Music","Its a chartbuster album. Exclusive everything", "https://images.genius.com/789a67419a612d81cbbcb10380b5781c.800x800x1.jpg", true);
 		
 		//Code to drop All hotels.
 		this.BlogListRepository.deleteAll();

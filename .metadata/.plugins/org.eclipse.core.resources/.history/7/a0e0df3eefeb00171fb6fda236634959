@@ -1,0 +1,31 @@
+import { BlogItem } from '../bloglist/bloglist.model';
+import { Injectable } from '@angular/core';
+import { Http, Response } from '@angular/http';
+
+@Injectable()
+export class StorageService {
+  private bloglistUrl = 'rest/bloglist/blog';
+
+  constructor(private http: Http) {}
+
+  getAllBlogs() {
+    this.http.get(this.bloglistUrl).subscribe(
+      (response: Response) => {
+       const blogItemsFromDB = BlogItem[] = response.json(); 
+    })
+  }
+
+
+  /* getAllBlogs(): Promise<BlogItem> {
+    return this.http.get(this.bloglistUrl)
+               .toPromise()
+               .then(response => response.json() as BlogItem[])
+               .catch(this.handleError);
+  }
+
+  private handleError(error: any): Promise<any> {
+    console.error('Error', error);
+    return Promise.reject(error.message || error);
+  } */
+ }
+

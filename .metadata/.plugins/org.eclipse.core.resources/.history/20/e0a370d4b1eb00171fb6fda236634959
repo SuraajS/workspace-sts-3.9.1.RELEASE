@@ -1,0 +1,15 @@
+
+import { BlogListService } from '../bloglist/bloglist.service';
+import { Injectable } from '@angular/core';
+import { Http, Headers } from '@angular/http';
+
+@Injectable()
+export class RestService {
+  constructor(private http: Http,
+              private blogService: BlogListService) {}
+
+  storeInDB () {
+    const headers = new Headers({'Content-Type': 'application/json'});
+     return this.http.put('/api', this.blogService.getBlogList(), {headers: headers});
+  }
+}

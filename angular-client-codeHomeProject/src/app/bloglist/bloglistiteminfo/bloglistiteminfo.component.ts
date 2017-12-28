@@ -1,7 +1,7 @@
 import { BlogItemInfo } from '../../helper/blogiteminfo.model';
 import { BlogItem } from '../bloglist.model';
 import { BlogListService } from '../bloglist.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 
 
@@ -10,6 +10,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
   templateUrl: './bloglistiteminfo.component.html',
   styleUrls: ['./bloglistiteminfo.component.css']
 })
+
 export class BloglistiteminfoComponent implements OnInit {
 
    blogItemInfos: BlogItem;

@@ -1,1 +1,6 @@
 ng serve
+mvn clean install
+ng spring
+ng String
+mvn spring-boot:run
+run

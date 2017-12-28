@@ -1,0 +1,17 @@
+import { BlogListService } from '../bloglist/bloglist.service';
+import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+
+@Injectable()
+export class StorageService {
+  private bloglistUrl = 'rest/bloglist/blog';
+
+  constructor(private http: Http) {}
+  
+  getAllBlogs(): Promise<BlogListService[]> {
+    return this.http.get(this.bloglistUrl)
+               .toPromise()
+               .then(response => response.json() as BlogListService[])
+               .catch(this.handleError);
+  }
+ }
